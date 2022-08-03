@@ -1,5 +1,7 @@
 # memoized solution
-def can_sum(target_sum, numbers, memo = {}):
+def can_sum(target_sum, numbers, memo = None):
+    if memo is None:
+        memo = {}
     if target_sum in memo:
         return memo[target_sum]
     if target_sum == 0:
