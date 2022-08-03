@@ -1,5 +1,7 @@
 # memoized solution
-def fib(n, memo = {}):
+def fib(n, memo = None):
+    if memo is None:
+        memo = {}
     if n in memo:
         return memo[n]
     if n <= 2:
