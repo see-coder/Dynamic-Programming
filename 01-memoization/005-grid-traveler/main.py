@@ -1,5 +1,7 @@
 # memoized solution
-def grid_traveler(m, n, memo = {}):
+def grid_traveler(m, n, memo = None):
+    if memo is None:
+        memo = {}
     if (m, n) in memo:
         return memo[(m, n)]
     if m == 1 and n == 1:
